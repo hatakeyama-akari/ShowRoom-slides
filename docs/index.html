@@ -4,20 +4,42 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>ShowRoomSlide01</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+		<link rel="stylesheet" href="dist/theme/moon.css" id="theme">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+		<!-- pagesファイル読み込み -->
+		<script>
+			$(function(){ 
+				$.ajaxSetup({cache:false});
+				$("#title").load("pages/title.html");
+				$("#1").load("pages/1.html");
+				$("#2").load("pages/2.html");
+				$("#3").load("pages/3.html");
+				// $("#4").load("pages/4.html");
+				// $("#5").load("pages/5.html");
+				// $("#summary").load("pages/summary.html");
+			});
+		</script>
+		
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section id="title"></section>
+				<section id="1"></section>
+				<section id="2"></section>
+				<section id="3"></section>
+				<!-- <section id="4"></section>
+				<section id="5"></section>
+				<section id="summary"></section> -->
 			</div>
 		</div>
 
